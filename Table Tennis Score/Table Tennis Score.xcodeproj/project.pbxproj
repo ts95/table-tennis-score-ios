@@ -47,6 +47,7 @@
 		E2316574299E3DFC0039F6D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2316577299E3DFC0039F6D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2316582299E49530039F6D4 /* TableTennisScoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTennisScoreRepository.swift; sourceTree = "<group>"; };
+		E27D92A429A0F3C400E2709A /* Table-Tennis-Score-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Table-Tennis-Score-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 		E231656F299E3DFB0039F6D4 /* Table Tennis Score Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				E27D92A429A0F3C400E2709A /* Table-Tennis-Score-Watch-App-Info.plist */,
 				E2316570299E3DFB0039F6D4 /* Table_Tennis_ScoreApp.swift */,
 				E2316572299E3DFB0039F6D4 /* ContentView.swift */,
 				E2316582299E49530039F6D4 /* TableTennisScoreRepository.swift */,
@@ -333,6 +335,8 @@
 				DEVELOPMENT_TEAM = FE6WMDZ3AJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Table-Tennis-Score-Watch-App-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -364,6 +368,8 @@
 				DEVELOPMENT_TEAM = FE6WMDZ3AJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Table-Tennis-Score-Watch-App-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
