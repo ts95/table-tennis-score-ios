@@ -34,6 +34,7 @@ struct ContentView: View {
                 Section("Actions") {
                     Button {
                         scoreRepository.undoLastPoint()
+                        playHaptic(.click)
                     } label: {
                         Text("Undo last point")
                     }
@@ -41,6 +42,7 @@ struct ContentView: View {
 
                     Button {
                         scoreRepository.game.initiallyServingPlayer = scoreRepository.game.initiallyServingPlayer.other
+                        playHaptic(.click)
                     } label: {
                         Text("Switch serve")
                     }
@@ -49,6 +51,7 @@ struct ContentView: View {
                     Button(role: .destructive) {
                         pickedServingPlayer = false
                         scoreRepository.reset()
+                        playHaptic(.click)
                     } label: {
                         Text("Reset game")
                     }
@@ -100,9 +103,9 @@ struct ContentView: View {
         VStack(spacing: 16) {
             Button {
                 if scoreRepository.scorePoint(for: .player1) {
-                    WKInterfaceDevice.current().play(.success)
+                    playHaptic(.success)
                 } else {
-                    WKInterfaceDevice.current().play(.click)
+                    playHaptic(.click)
                 }
             } label: {
                 HStack(spacing: 18) {
@@ -133,9 +136,9 @@ struct ContentView: View {
 
             Button {
                 if scoreRepository.scorePoint(for: .player2) {
-                    WKInterfaceDevice.current().play(.success)
+                    playHaptic(.success)
                 } else {
-                    WKInterfaceDevice.current().play(.click)
+                    playHaptic(.click)
                 }
             } label: {
                 HStack(spacing: 18) {
@@ -193,10 +196,15 @@ struct ContentView: View {
             Button {
                 scoreRepository.reset()
                 pickedServingPlayer = false
+                playHaptic(.click)
             } label: {
                 Text("New game")
             }
         }
+    }
+
+    func playHaptic(_ hapticType: WKHapticType) {
+        WKInterfaceDevice.current().play(hapticType)
     }
 }
 
