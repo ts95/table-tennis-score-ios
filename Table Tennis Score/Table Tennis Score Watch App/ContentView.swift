@@ -86,6 +86,7 @@ struct ContentView: View {
             Button {
                 scoreRepository.game.initiallyServingPlayer = .player1
                 pickedServingPlayer = true
+                playHaptic(.click)
             } label: {
                 Text("Player #1")
             }
@@ -93,6 +94,7 @@ struct ContentView: View {
             Button {
                 scoreRepository.game.initiallyServingPlayer = .player2
                 pickedServingPlayer = true
+                playHaptic(.click)
             } label: {
                 Text("Player #2")
             }
