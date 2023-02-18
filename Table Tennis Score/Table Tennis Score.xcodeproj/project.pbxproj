@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E231656C299E3DFB0039F6D4 /* Table Tennis Score Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E231656B299E3DFB0039F6D4 /* Table Tennis Score Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E231656C299E3DFB0039F6D4 /* Ping Pong.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E231656B299E3DFB0039F6D4 /* Ping Pong.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E2316571299E3DFB0039F6D4 /* Table_Tennis_ScoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2316570299E3DFB0039F6D4 /* Table_Tennis_ScoreApp.swift */; };
 		E2316573299E3DFB0039F6D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2316572299E3DFB0039F6D4 /* ContentView.swift */; };
 		E2316575299E3DFC0039F6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2316574299E3DFC0039F6D4 /* Assets.xcassets */; };
@@ -32,7 +32,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				E231656C299E3DFB0039F6D4 /* Table Tennis Score Watch App.app in Embed Watch Content */,
+				E231656C299E3DFB0039F6D4 /* Ping Pong.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		E2316565299E3DFB0039F6D4 /* Table Tennis Score.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table Tennis Score.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E231656B299E3DFB0039F6D4 /* Table Tennis Score Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table Tennis Score Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E231656B299E3DFB0039F6D4 /* Ping Pong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ping Pong.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2316570299E3DFB0039F6D4 /* Table_Tennis_ScoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_Tennis_ScoreApp.swift; sourceTree = "<group>"; };
 		E2316572299E3DFB0039F6D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2316574299E3DFC0039F6D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				E2316565299E3DFB0039F6D4 /* Table Tennis Score.app */,
-				E231656B299E3DFB0039F6D4 /* Table Tennis Score Watch App.app */,
+				E231656B299E3DFB0039F6D4 /* Ping Pong.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,7 +131,7 @@
 			);
 			name = "Table Tennis Score Watch App";
 			productName = "Table Tennis Score Watch App";
-			productReference = E231656B299E3DFB0039F6D4 /* Table Tennis Score Watch App.app */;
+			productReference = E231656B299E3DFB0039F6D4 /* Ping Pong.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -326,13 +326,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Table Tennis Score Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = FE6WMDZ3AJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Table Tennis Score";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -341,7 +341,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "no.tonisucic.Table-Tennis-Score.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ping Pong";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -356,13 +357,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Table Tennis Score Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = FE6WMDZ3AJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Table Tennis Score";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -371,7 +372,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "no.tonisucic.Table-Tennis-Score.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ping Pong";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
