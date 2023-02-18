@@ -7,9 +7,20 @@
 
 import Foundation
 
-enum Player {
+enum Player: CaseIterable, Identifiable {
     case player1
     case player2
+
+    var id: Player { self }
+
+    var defaultName: String {
+        switch self {
+        case .player1:
+            return "Player #1"
+        case .player2:
+            return "Player #2"
+        }
+    }
 
     var other: Player {
         switch self {

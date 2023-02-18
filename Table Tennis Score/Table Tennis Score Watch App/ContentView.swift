@@ -10,6 +10,8 @@ import WatchKit
 
 struct ContentView: View {
     @StateObject private var scoreRepository = TableTennisScoreRepository()
+    @StateObject private var playerRepository = PlayerRepository()
+
     @State private var tabSelection = Tab.game
     @State private var pickedServingPlayer = false
 
@@ -57,6 +59,22 @@ struct ContentView: View {
                     }
                     .disabled(!pickedServingPlayer)
                 }
+
+                Section("Players") {
+                    ForEach(Player.allCases) { player in
+                        NavigationLink {
+                            ChangePlayerNameView(player: player, playerRepository: playerRepository)
+                        } label: {
+                            HStack {
+                                Text(playerRepository.playerName(for: player))
+
+                                Spacer()
+
+                                Image(systemName: "chevron.right")
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -88,7 +106,7 @@ struct ContentView: View {
                 pickedServingPlayer = true
                 playHaptic(.click)
             } label: {
-                Text("Player #1")
+                Text(playerRepository.playerName(for: .player1))
             }
 
             Button {
@@ -96,7 +114,7 @@ struct ContentView: View {
                 pickedServingPlayer = true
                 playHaptic(.click)
             } label: {
-                Text("Player #2")
+                Text(playerRepository.playerName(for: .player2))
             }
         }
     }
@@ -112,13 +130,14 @@ struct ContentView: View {
             } label: {
                 HStack(spacing: 18) {
                     Text("\(scoreRepository.game.player1Score)")
-                        .frame(width: 32)
+                        .frame(width: 40, alignment: .trailing)
 
                     Divider()
                         .background(Color.white)
                         .frame(height: 24)
 
-                    Text("Player #1")
+                    Text(playerRepository.playerName(for: .player1))
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.black)
@@ -145,13 +164,14 @@ struct ContentView: View {
             } label: {
                 HStack(spacing: 18) {
                     Text("\(scoreRepository.game.player2Score)")
-                        .frame(width: 32)
+                        .frame(width: 40, alignment: .trailing)
 
                     Divider()
                         .background(Color.white)
                         .frame(height: 24)
 
-                    Text("Player #2")
+                    Text(playerRepository.playerName(for: .player2))
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.red)
@@ -186,12 +206,7 @@ struct ContentView: View {
     @ViewBuilder func gameWonView(winner: Player) -> some View {
         VStack(spacing: 24) {
             Group {
-                switch winner {
-                case .player1:
-                    Text("Player #1 won!")
-                case .player2:
-                    Text("Player #2 won!")
-                }
+                Text("\(playerRepository.playerName(for: winner)) won!")
             }
             .font(.title3)
 

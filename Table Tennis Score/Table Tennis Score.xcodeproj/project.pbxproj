@@ -13,6 +13,8 @@
 		E2316575299E3DFC0039F6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2316574299E3DFC0039F6D4 /* Assets.xcassets */; };
 		E2316578299E3DFC0039F6D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2316577299E3DFC0039F6D4 /* Preview Assets.xcassets */; };
 		E2316583299E49530039F6D4 /* TableTennisScoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2316582299E49530039F6D4 /* TableTennisScoreRepository.swift */; };
+		E27D92A629A11BE400E2709A /* ChangePlayerNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27D92A529A11BE400E2709A /* ChangePlayerNameView.swift */; };
+		E27D92AA29A125AE00E2709A /* PlayerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27D92A929A125AE00E2709A /* PlayerRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		E2316577299E3DFC0039F6D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2316582299E49530039F6D4 /* TableTennisScoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTennisScoreRepository.swift; sourceTree = "<group>"; };
 		E27D92A429A0F3C400E2709A /* Table-Tennis-Score-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Table-Tennis-Score-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E27D92A529A11BE400E2709A /* ChangePlayerNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePlayerNameView.swift; sourceTree = "<group>"; };
+		E27D92A929A125AE00E2709A /* PlayerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +88,9 @@
 				E27D92A429A0F3C400E2709A /* Table-Tennis-Score-Watch-App-Info.plist */,
 				E2316570299E3DFB0039F6D4 /* Table_Tennis_ScoreApp.swift */,
 				E2316572299E3DFB0039F6D4 /* ContentView.swift */,
+				E27D92A529A11BE400E2709A /* ChangePlayerNameView.swift */,
 				E2316582299E49530039F6D4 /* TableTennisScoreRepository.swift */,
+				E27D92A929A125AE00E2709A /* PlayerRepository.swift */,
 				E2316574299E3DFC0039F6D4 /* Assets.xcassets */,
 				E2316576299E3DFC0039F6D4 /* Preview Content */,
 			);
@@ -197,9 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27D92A629A11BE400E2709A /* ChangePlayerNameView.swift in Sources */,
 				E2316573299E3DFB0039F6D4 /* ContentView.swift in Sources */,
 				E2316583299E49530039F6D4 /* TableTennisScoreRepository.swift in Sources */,
 				E2316571299E3DFB0039F6D4 /* Table_Tennis_ScoreApp.swift in Sources */,
+				E27D92AA29A125AE00E2709A /* PlayerRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
