@@ -44,6 +44,7 @@ struct ContentView: View {
                     } label: {
                         Text("Switch serve")
                     }
+                    .disabled(!pickedServingPlayer)
 
                     Button(role: .destructive) {
                         pickedServingPlayer = false
