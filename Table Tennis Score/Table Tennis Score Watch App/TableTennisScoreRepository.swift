@@ -22,39 +22,64 @@ enum Player {
 }
 
 class TableTennisScoreRepository: ObservableObject {
-    @Published var player1Score = 0
-    @Published var player2Score = 0
-    @Published var initiallyServingPlayer: Player = .player1
+    @Published var game = Game()
 
-    var servingPlayer: Player {
-        (player1Score + player2Score) % 4 < 2 ? initiallyServingPlayer : initiallyServingPlayer.other
-    }
+    var gameHistory = [Game]()
 
-    var winner: Player? {
-        if player1Score >= 11 || player2Score >= 11 {
-            if player1Score - player2Score - 2 >= 0 {
-                return .player1
-            } else if player2Score - player1Score - 2 >= 0 {
-                return .player2
-            } else {
-                return nil
-            }
-        } else {
-            return nil
-        }
-    }
+    /// Returns true if the scored point won the game.
+    func scorePoint(for player: Player) -> Bool {
+        gameHistory.append(game)
 
-    func scorePoint(for player: Player) {
         switch player {
         case .player1:
-            player1Score += 1
+            game.player1Score += 1
         case .player2:
-            player2Score += 1
+            game.player2Score += 1
+        }
+
+        return game.winner != nil
+    }
+
+    func undoLastPoint() {
+        if let lastGame = gameHistory.popLast() {
+            game = lastGame
         }
     }
 
     func reset() {
-        player1Score = 0
-        player2Score = 0
+        gameHistory.removeAll()
+        game = Game()
+    }
+
+    struct Game: Hashable {
+        var player1Score = 0
+        var player2Score = 0
+        var initiallyServingPlayer: Player = .player1
+        let winningScore = 11
+
+        var totalScore: Int {
+            player1Score + player2Score
+        }
+
+        var servingPlayer: Player {
+            if player1Score >= 10 && player2Score >= 10 {
+                return totalScore % 2 == 0 ? initiallyServingPlayer : initiallyServingPlayer.other
+            }
+            return totalScore % 4 < 2 ? initiallyServingPlayer : initiallyServingPlayer.other
+        }
+
+        var winner: Player? {
+            if player1Score >= winningScore || player2Score >= winningScore {
+                if player1Score - player2Score - 2 >= 0 {
+                    return .player1
+                } else if player2Score - player1Score - 2 >= 0 {
+                    return .player2
+                } else {
+                    return nil
+                }
+            } else {
+                return nil
+            }
+        }
     }
 }
